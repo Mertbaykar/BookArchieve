@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "585d8417-60b3-4edc-92cc-6388cf160ff5",
+		"name": "Alışverişlio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18762038"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "CreateAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Ömer\",\r\n  \"lastName\": \"Seyfettin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Book/CreateAuthor",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Book",
+								"CreateAuthor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CoverImageFile",
+									"type": "file",
+									"src": "/C:/Users/DELL/OneDrive/Masaüstü/CV VE MEZUNİYET/vesikalık.jpg"
+								},
+								{
+									"key": "Name",
+									"value": "Yalnız Efe 2",
+									"type": "text"
+								},
+								{
+									"key": "Summary",
+									"value": "Yalnız Efe kitabında, Kezban isimli bir genç kızın babası ve kendisinin uğradığı haksızlık sonucunda dağa çıkması, haksızlığa uğrayan herkes için mücadele etmesi anlatılmaktadır. Yalnız Efe olarak anılan Kezban, genç ve güzel bir kızdır. Dağa çıktıktan sonra kendini hiçbir erkeğe göstermemiş, dağlarda hep tek başına gezmiştir. Köylüden para almamıştır. Tüm zalimlerin, halkı soyan kişilerin korkulu rüyası olmuştur. Camilerin ve köprülerin onarılmasını, okul yaptırılmasını, yoksullara yardım edilmesini sağlamıştır. Askere karşı durmamış, onlarla çatışmamıştır. Bir sır olduktan sonra da efsaneleşmiştir.",
+									"type": "text"
+								},
+								{
+									"key": "PublishYear",
+									"value": "1919",
+									"type": "text"
+								},
+								{
+									"key": "AuthorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ShelfLocation",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Book/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Book",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CoverImageFile",
+									"type": "file",
+									"src": "/C:/Users/DELL/OneDrive/Masaüstü/CV VE MEZUNİYET/mertbaykar-vesika.jpg"
+								},
+								{
+									"key": "Name",
+									"value": "Berk Aykaç",
+									"type": "text"
+								},
+								{
+									"key": "Summary",
+									"value": "Yalnız Efe kitabında, Kezban isimli bir genç kızın babası ve kendisinin uğradığı haksızlık sonucunda dağa çıkması, haksızlığa uğrayan herkes için mücadele etmesi anlatılmaktadır. Yalnız Efe olarak anılan Kezban, genç ve güzel bir kızdır. Dağa çıktıktan sonra kendini hiçbir erkeğe göstermemiş, dağlarda hep tek başına gezmiştir. Köylüden para almamıştır. Tüm zalimlerin, halkı soyan kişilerin korkulu rüyası olmuştur. Camilerin ve köprülerin onarılmasını, okul yaptırılmasını, yoksullara yardım edilmesini sağlamıştır. Askere karşı durmamış, onlarla çatışmamıştır. Bir sır olduktan sonra da efsaneleşmiştir.",
+									"type": "text"
+								},
+								{
+									"key": "PublishYear",
+									"value": "1919",
+									"type": "text"
+								},
+								{
+									"key": "AuthorId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ShelfLocation",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "Id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Book/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Book",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n//   \"text\": \"berk\"\r\n//   \"authorId\": 1\r\n  \"createdById\": 1\r\n//   \"publishYear\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Book/Search",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Book",
+								"Search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Book/Delete?id=4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Book",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"mertbaykar@hotmail.com\",\r\n  \"password\": \"MMerdo498.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/User/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"User",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateShareSetting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"mertbaykar@hotmail.com\",\r\n  \"password\": \"MMerdo498.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/User/UpdateShareSetting?shareId=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"User",
+								"UpdateShareSetting"
+							],
+							"query": [
+								{
+									"key": "shareId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddFriend",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"mertbaykar@hotmail.com\",\r\n  \"password\": \"MMerdo498.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/User/AddFriend?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"User",
+								"AddFriend"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"Selam\",\r\n    \"isShared\":true,\r\n    \"bookId\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Note/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Note",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"text\":\"SelamUpdated\",\r\n    \"isShared\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Note/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Note",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://localhost:7211/api/Note/Delete?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7211",
+							"path": [
+								"api",
+								"Note",
+								"Delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtZXJ0YmF5a2FyQGhvdG1haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoibWVydCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJiYXlrYXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibWVydCBiYXlrYXIiLCJleHAiOjE3MjAxMzE2MjYsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMTEvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMS8ifQ.7ZuCUu5pxJjOYrv6lA3-wWjl81I4YrmqhDdurj-xCKE",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJiZXJrQGhvdG1haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoiYmVyayIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJheWthw6ciLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYmVyayBheWthw6ciLCJleHAiOjE3MjAxMjk3MjIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMTEvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMS8ifQ.rJSw1EH5AmJQ2_XQR2ILETW4XHG82auUbs2IoZ3hqmI",
+			"type": "string"
+		}
+	]
+}
